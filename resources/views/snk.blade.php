@@ -1,7 +1,7 @@
 @extends('template.app')
 @section('content')
 
-  <section class="heading-page header-text" id="top">
+  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/sub-bg.jpg');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -20,60 +20,36 @@
             <div class="col-lg-12">
               <div class="meeting-single-item">
                 <div class="thumb">
-                  <div class="price">
-                    <span>$14.00</span>
-                  </div>
                   <div class="date">
                     <h6>Nov <span>12</span></h6>
                   </div>
                   <a href="meeting-details.html"><img src="assets/images/single-meeting.jpg" alt=""></a>
                 </div>
                 <div class="down-content">
-                  <a href="meeting-details.html"><h4>Online Teaching and Learning Tools</h4></a>
-                  <p>Recreio dos Bandeirantes, Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                  <p class="description">
-                    This is an edu meeting HTML CSS template provided by <a href="https://templatemo.com/" target="_blank" rel="nofollow">TemplateMo website</a>. This is a Bootstrap v5.1.3 layout. If you need more free website templates like this one, please visit our website TemplateMo. Please tell your friends about our website. Thank you. If you want to get the latest collection of HTML CSS templates for your websites, you may visit <a rel="nofollow" href="https://www.toocss.com/" target="_blank">Too CSS website</a>. If you need a working contact form script, please visit <a href="https://templatemo.com/contact" target="_parent">our contact page</a> for more info.
+                  <a href="meeting-details.html"><h4>Syarat dan ketentuan</h4></a>
+                  <p>yang ditetapkan di bawah ini mengatur pemakaian jasa online Jawa Timur Park Group terkait penggunaan website www.jtp.id. Pelanggan disarankan membaca dengan saksama karena dapat berdampak kepada hak dan kewajiban pelanggan di bawah hukum.
 
-                    <br><br>You are allowed to use this edu meeting CSS template for your school or university or business. You can feel free to modify or edit this layout. You are not allowed to redistribute the template ZIP file on any other template website. Please contact us for more information.
-                  </p>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="hours">
-                        <h5>Hours</h5>
-                        <p>Monday - Friday: 07:00 AM - 13:00 PM<br>Saturday- Sunday: 09:00 AM - 15:00 PM</p>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="location">
-                        <h5>Location</h5>
-                        <p>Recreio dos Bandeirantes,
-                        <br>Rio de Janeiro - RJ, 22795-008, Brazil</p>
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="book now">
-                        <h5>Book Now</h5>
-                        <p>010-020-0340<br>090-080-0760</p>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="share">
-                        <h5>Share:</h5>
-                        <ul>
-                          <li><a href="#">Facebook</a>,</li>
-                          <li><a href="#">Twitter</a>,</li>
-                          <li><a href="#">Linkedin</a>,</li>
-                          <li><a href="#">Behance</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                    Dengan mengakses dan/atau mengunakan website www.jtp.id, maka pelanggan dianggap telah membaca, mengerti, memahami dan menyetujui semua isi dalam syarat dan ketentuan yang telah ditetapkan.</p>
+                    <ol>
+                    <li><p class="description">1. DEFINISI</p></li>
+<ol>
+    <li><p>a) Jawa Timur Park Group adalah jasa online yang dimiliki dan dioperasikan oleh PT Bunga Wangsa Sedjati.</p></li>
+    <li><p>b) Situs Jawa Timur Park Group adalah www.jtp.id.</p></li>
+    <li><p>c) Syarat & Ketentuan adalah perjanjian antara pelanggan dan Jawa Timur Park Group yang berisikan seperangkat peraturan yang mengatur hak, kewajiban, tanggung jawab pelanggan dan Jawa Timur Park Group, serta tata cara penggunaan sistem layanan Jawa Timur Park Group.</p></li>
+    <li><p>d) Pelanggan adalah pengguna yang melakukan pembelian atas barang berupa tiket masuk theme park Jawa Timur Park Group yang dijual di situs www.jtp.id..</p></li>
+    <li><p>e) www.jtp.id adalah situs jasa online yang melakukan tindakan menjual tiket masuk theme park Jawa Timur Park Group.</p></li>
+    <li><p>f) Tiket adalah benda berupa gelang yang diikatkan di pergelangan tangan sebagai tanda masuk theme park.</p></li>
+    <li><p>g) Rekening resmi Jawa Timur Park Group adalah rekening bank yang telah bekerja sama untuk proses transaksi jual beli di situs www.jtp.id.</p></li>
+</ol>
+
+                </ol>
+
                 </div>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="main-button-red">
-                <a href="meetings.html">Back To Meetings List</a>
+                <a href="{{ route('home') }}">Back To Home</a>
               </div>
             </div>
           </div>
