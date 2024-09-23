@@ -36,6 +36,7 @@
             <h2>Latest Event</h2>
           </div>
         </div>
+        
         <div class="col-lg-4">
           <div class="categories">
             <h4>Event Catgories</h4>
@@ -50,6 +51,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-lg-8">
           <div class="row">
             <div class="col-lg-6">
