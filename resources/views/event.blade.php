@@ -4,7 +4,7 @@
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
     <video autoplay muted loop id="bg-video">
-        <source src="assets/images/ori-journey.mp4" type="video/mp4" />
+        <source src="assets/images/jtp-video.mp4" type="video/mp4" />
     </video>
 
     <div class="video-overlay header-text">
@@ -36,7 +36,7 @@
             <h2>Latest Event</h2>
           </div>
         </div>
-        
+
         <div class="col-lg-4">
           <div class="categories">
             <h4>Event Catgories</h4>
