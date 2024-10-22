@@ -1,7 +1,7 @@
 @extends('template.app')
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <section class="heading-page header-text" id="top" style="background-image: url('assets/images/sub-bg.jpg');">
+    <section class="heading-page header-text" id="top" style="background-image: url('{{ asset('assets/images/sub-bg.jpg') }}');">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -21,8 +21,7 @@
                             <div class="price">
                                 <span>5ok</span>
                             </div>
-                            <a href="meeting-details.html"><img src="assets/images/diskon.jpg"
-                                    alt="New Lecturer Meeting"></a>
+                            <a href="meeting-details.html"><img src="{{ asset('assets/images/diskon.jpg') }}" alt="New Lecturer Meeting"></a>
                         </div>
                         <div class="down-content">
                             <div class="date">
@@ -34,13 +33,13 @@
                             <p>Syarat & Ketentuan :
 
                                 – Kunjungan pada themepark ( tertanda diskon ) dilakukan di hari yang sama
-                                
+
                                 – Gelang tiket pada kunjungan themepark pertama tidak rusak atau lepas
-                                
+
                                 – Diskon tidak berlaku untuk kunjungan langsung pada themepark yang (tertanda diskon )
-                                
+
                                 – Harga yang tertulis adalah harga normal atau belum termasuk potongan diskon
-                                
+
                                 – Khusus pembelian tiket the legend stars + museum musik dunia / fun tech plaza akan mendapatkan *Free Tiket ke Secret Journey*</p>
                         </div>
                     </div>

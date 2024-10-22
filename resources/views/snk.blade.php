@@ -1,7 +1,7 @@
 @extends('template.app')
 @section('content')
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/sub-bg.jpg');">
+  <section class="heading-page header-text" id="top" style="background-image: url('{{ asset('assets/images/sub-bg.jpg') }}');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -23,7 +23,7 @@
                   <div class="date">
                     <h6>Nov <span>12</span></h6>
                   </div>
-                  <a href="meeting-details.html"><img src="assets/images/single-meeting.jpg" alt=""></a>
+                  <a href="meeting-details.html"><img src="{{ asset('assets/images/single-meeting.jpg') }}" alt=""></a>
                 </div>
                 <div class="down-content">
                   <a href="meeting-details.html"><h4>Syarat dan ketentuan</h4></a>

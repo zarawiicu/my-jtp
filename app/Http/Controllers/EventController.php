@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EventModel;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
     public function index() {
-        return view('event');
+        $events = EventModel::all();
+        return view('event', compact('events'));
     }
 
     public function snk() {

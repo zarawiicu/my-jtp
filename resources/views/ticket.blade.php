@@ -3,7 +3,7 @@
     <!-- ***** Main Banner Area Start ***** -->
     <section class="section main-banner" id="top" data-section="section1">
         <video autoplay muted loop id="bg-video">
-            <source src="assets/images/jtp-video.mp4" type="video/mp4" />
+            <source src="{{ asset('assets/images/jtp-video.mp4') }}" type="video/mp4" />
         </video>
 
         <div class="video-overlay header-text">
@@ -17,7 +17,7 @@
                                 permainan, pengetahuan hingga hiburan dan menjadi salah satu icon wisata Jawa Timur yang
                                 terdapat di Kota Batu.</p>
                             <div class="main-button-red">
-                                <div class="scroll-to-section"><a href="profile-group">Find Out More</a></div>
+                                <div class="scroll-to-section"><a href="{{ route('profile-group') }}">Find Out More</a></div>
                             </div>
                         </div>
                     </div>

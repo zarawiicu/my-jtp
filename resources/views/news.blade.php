@@ -1,7 +1,7 @@
 @extends('template.app')
 @section('content')
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/sub-bg.jpg');">
+  <section class="heading-page header-text" id="top" style="background-image: url('{{ asset('assets/images/sub-bg.jpg') }}');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -32,8 +32,8 @@
                 <div class="col-lg-4 templatemo-item-col all soon">
                   <div class="meeting-item">
                     <div class="thumb">
-                    
-                      <a href="meeting-details.html"><img src="assets/images/news1.jpg" alt=""></a>
+
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news1.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -48,8 +48,8 @@
                 <div class="col-lg-4 templatemo-item-col all imp">
                   <div class="meeting-item">
                     <div class="thumb">
-                      
-                      <a href="meeting-details.html"><img src="assets/images/news2.png" alt=""></a>
+
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news2.png') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -64,8 +64,8 @@
                 <div class="col-lg-4 templatemo-item-col all soon">
                   <div class="meeting-item">
                     <div class="thumb">
-                      
-                      <a href="meeting-details.html"><img src="assets/images/news3.jpg" alt=""></a>
+
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news3.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -80,7 +80,7 @@
                 <div class="col-lg-4 templatemo-item-col all att">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news1.jpg" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news1.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -95,7 +95,7 @@
                 <div class="col-lg-4 templatemo-item-col all att">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news2.png" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news2.png') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -110,7 +110,7 @@
                 <div class="col-lg-4 templatemo-item-col all imp">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news3.jpg" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news3.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -125,7 +125,7 @@
                 <div class="col-lg-4 templatemo-item-col all imp att">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news1.jpg" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news1.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -140,7 +140,7 @@
                 <div class="col-lg-4 templatemo-item-col all soon imp">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news2.png" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news2.png') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -155,7 +155,7 @@
                 <div class="col-lg-4 templatemo-item-col all att soon">
                   <div class="meeting-item">
                     <div class="thumb">
-                      <a href="meeting-details.html"><img src="assets/images/news3.jpg" alt=""></a>
+                      <a href="meeting-details.html"><img src=" {{ asset('assets/images/news3.jpg') }}" alt=""></a>
                     </div>
                     <div class="down-content">
                       <div class="date">
@@ -168,7 +168,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="col-lg-12">
               <div class="pagination">
                 <ul>

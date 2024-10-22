@@ -1,7 +1,7 @@
 @extends('template.app')
 @section('content')
 
-  <section class="heading-page header-text" id="top" style="background-image: url('assets/images/sub-bg.jpg');">
+  <section class="heading-page header-text" id="top" style="background-image: url('{{ asset('assets/images/sub-bg.jpg') }}');">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -23,7 +23,7 @@
                   <div class="date">
                     <h6>Nov <span>12</span></h6>
                   </div>
-                  <a href="meeting-details.html"><img src="assets/images/jtp-logo.jpg" alt=""></a>
+                  <a href="meeting-details.html"><img src="{{ asset('assets/images/jtp-logo.jpg') }}" alt=""></a>
                 </div>
                 <div class="down-content">
                   <a href="meeting-details.html"><h4>Profil Jawa Timur Park Group</h4></a>
@@ -33,7 +33,7 @@
 
 Tokoh Punakawan tersebut melekat dalam desain theme park Jawa Timur Park Group, yang terdiri dari 11 taman rekreasi di Surabaya dan Malang, serta 1 taman rekreasi di Jawa Barat. Wahana rekreasi Jawa Timur Park Group sangat bervariasi, mulai dari museum, kebun binatang, taman, hingga pusat permainan, yang semuanya ditujukan untuk anak dan keluarga. Untuk melengkapi kenyamanan wisata, Jawa Timur Park Group juga telah memfasilitasi 4 hotel di Jawa Timur.
                   </p>
-                  
+
                 </div>
               </div>
             </div>
@@ -46,5 +46,5 @@ Tokoh Punakawan tersebut melekat dalam desain theme park Jawa Timur Park Group, 
         </div>
       </div>
     </div>
-    
+
     @endsection

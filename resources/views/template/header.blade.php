@@ -5,24 +5,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Mt JTP</title>
+    <title>My JTP</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('./vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('../images/jtp-logo.jpg') }}" type="image/x-icon">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-edu-meeting.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-edu-meeting.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
     <!-- Styles -->
     <style>
         /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
@@ -963,8 +963,18 @@
                             <ul class="sub-menu">
                                 <li><a href="{{ route('ticket')}}">Ticket</a></li>
                                 <li><a href="{{ route('snk') }}">Syarat Ketentuan</a></li>
+                                <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li>
+                                <li><a href="{{ route('login.index') }}">Login</a></li>
                             </ul>
                         </li>
+                        <li>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">
+                            Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
