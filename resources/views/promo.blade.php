@@ -12,16 +12,16 @@
         </div>
     </section>
 
-    <sectuin>
-        <div class="col-lg-8" style="margin-left:480px;margin-top:100px;">
+    <section>
+        <div class="col-lg-8" style="margin-left:580px;margin-top:100px;">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" style=" box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3); border-radius: 20px">
                     <div class="meeting-item">
                         <div class="thumb">
                             <div class="price">
-                                <span>5ok</span>
+                                <span>50k</span>
                             </div>
-                            <a href="meeting-details.html"><img src="{{ asset('assets/images/diskon.jpg') }}" alt="New Lecturer Meeting"></a>
+                            <a href="meeting-details.html"><img src="{{ asset('assets/images/diskon.jpg') }}" alt="New Lecturer Meeting" style="border-radius: 10px; padding: 10px;padding-top:15px"></a>
                         </div>
                         <div class="down-content">
                             <div class="date">

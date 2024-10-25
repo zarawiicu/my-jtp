@@ -23,7 +23,7 @@
     <script src=" {{ asset('template/assets/libs/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src=" {{ asset('template/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
     <script src=" {{ asset('template/assets/extra-libs/sparkline/sparkline.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geP1Gnv5uMT1qcVKQ9j2LnocnJv4T/WU+X+sHN65chPb584vH5iPo2jQTe651uBL" crossorigin="anonymous"></script>
+    
     <!--Wave Effects -->
     <script src=" {{ asset('template/dist/js/waves.js') }}"></script>
     <!--Menu sidebar -->

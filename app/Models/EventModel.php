@@ -12,7 +12,7 @@ class EventModel extends Model
     protected $table = 'events';
     protected $primarykey = 'id';
 
-    protected $fillable = ['id','judul', 'deskripsi', 'gambar'];
+    protected $fillable = ['judul', 'deskripsi', 'gambar'];
 
     public function getIdAttribute()
     {

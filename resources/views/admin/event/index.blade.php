@@ -30,7 +30,8 @@
                         <div class="row">
                             <div class="col-12 d-flex no-block align-items-center">
                                 <h1>Events</h1>
-                                <a href="{{ route('events.create') }}" class="btn btn-primary" style="margin-left:80%">Add Event</a>
+                                <a href="{{ route('events.create') }}" class="btn btn-primary" style="margin-left:80%">Add
+                                    Event</a>
                             </div>
                         </div>
 
@@ -50,11 +51,13 @@
                                         <td>{{ $event->id }}</td>
                                         <td>{{ $event->judul }}</td>
                                         <td>{{ $event->deskripsi }}</td>
-                                        <td><img src="{{ asset('storage/events' . $event->gambar) }}" alt="Event Image"
+                                        <td><img src="{{ asset('images/' . $event->gambar) }}" alt="Event Image"
                                                 width="100"></td>
                                         <td>
-                                            <a href="{{ route('events.show', $event->id) }}" class="btn btn-sm btn-outline-info">Show</a>
-                                            <a href="{{ route('events.edit', $event->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <a href="{{ route('events.show', $event->id) }}"
+                                                class="btn btn-sm btn-outline-info">Show</a>
+                                            <a href="{{ route('events.edit', $event->id) }}"
+                                                class="btn btn-sm btn-warning">Edit</a>
                                             <form action="{{ route('events.destroy', $event->id) }}" method="POST"
                                                 style="display:inline-block;">
                                                 @csrf

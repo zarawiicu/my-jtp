@@ -5,9 +5,12 @@ namespace App\Models;
 use Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class UserModel extends Model
+
+
+class UserModel extends Authenticatable
 {
     use HasFactory;
 
@@ -22,7 +25,7 @@ class UserModel extends Model
         'name',
         'email',
         'password',
-        'role'// Tambahkan role di sini
+        'is_admin'
     ];
 
     /**
@@ -33,6 +36,8 @@ class UserModel extends Model
     protected $hidden = [
         'password',
         'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
     ];
 
     /**
@@ -44,6 +49,11 @@ class UserModel extends Model
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = [
+        'profile_photo_url',
+    ];
+
+    
 }
 
 

@@ -57,7 +57,7 @@
                                                             class="col-sm-3 text-right control-label col-form-label">Image</label>
                                                         <div class="col-lg-12">
                                                             <input type="file" name="gambar" class="form-control">
-                                                            <img src="{{ asset('storage/event' . $events->gambar) }}"
+                                                            <img src="{{ asset('images/' . $events->gambar) }}"
                                                                 alt="Event Image" style="width: 100px;">
 
                                                         </div>

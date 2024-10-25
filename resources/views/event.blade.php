@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-12">
                     <div class="categories">
                         <h4>Event Catgories</h4>
                         <ul>
@@ -52,25 +52,29 @@
                     </div>
                 </div>
 
-
-                @foreach ($events as $event)
-                    <div class="row grid" style="grid-template-coloums: 1fx 1fx;">
-                        <div class="col-lg-4 templatemo-item-col all imp">
-                            <div class="meeting-item">
-                                <div class="thumb">
-                                    <img src="{{ asset('storage/' . $event->gambar) }}" alt="Event Image">
+                <div class="flex flex-col flex-wrap">
+                    <div class="col-lg-12">
+                        <div class="row" style="gap: 15px; margin-top:15%; border-top:5px solid white">
+                            @foreach ($events as $event)
+                                <div class="col-lg-4" style="margin-top:10%">
+                                    <div class="meeting-item">
+                                        <div class="thumb">
+                                            <img src="{{ asset('images/' . $event->gambar) }}" alt="Event Image" width="200px" height="150px">
+                                        </div>
+                                        <div class="down-content">
+                                            <h5 class="card-title">{{ $event->judul }}</h5>
+                                            <p class="card-text">{{ $event->deskripsi }}</p>
+                                            <a href="#" class="btn btn-block btn-outline-primary w-full">Read</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="down-content">
-                                    <h5 class="card-title">{{ $event->judul }}</h5>
-                                    <p class="card-text">{{ $event->deskripsi }}</p>
-                                    <a href="#" class="btn btn-block btn-outline-primary">Read</a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
-                @endforeach
+                </div>
             </div>
-
+        </div>
+        </div>
     </section>
 
     <section class="our-facts">
@@ -79,20 +83,20 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2>A Few Facts About Our University</h2>
+                            <h2>Some facts about our group</h2>
                         </div>
                         <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="count-area-content percentage">
-                                        <div class="count-digit">65</div>
-                                        <div class="count-title">Local Visitors</div>
+                                        <div class="count-digit">94</div>
+                                        <div class="count-title">Solid</div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="count-area-content">
-                                        <div class="count-digit">500</div>
-                                        <div class="count-title">Foreign Visitors</div>
+                                        <div class="count-digit">126</div>
+                                        <div class="count-title">Aboard</div>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +106,7 @@
                                 <div class="col-12">
                                     <div class="count-area-content new-students">
                                         <div class="count-digit">2345</div>
-                                        <div class="count-title">review</div>
+                                        <div class="count-title">Local</div>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -117,10 +121,10 @@
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="video">
-                        <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img
-                                src="{{ asset('assets/images/play-icon.png') }}" alt=""></a>
+                        <a href="https://youtu.be/FuNJOCYCWLM?si=btWsZ4sVOZRDHFsF" target="_blank"><img src=" {{ asset('assets/images/play-icon.png') }}" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
+    {{-- </section> --}}
     @endsection

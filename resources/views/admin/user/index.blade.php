@@ -39,7 +39,7 @@
                             <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                        <th scope="col">id</th>
+                                        <th scope="col">ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Password</th>
@@ -50,20 +50,20 @@
                                 <tbody>
                                     @foreach ($users as $u)
                                         <tr>
-                                            <td>{{ $u->is }}</td>
+                                            <td>{{ $u->id }}</td>
                                             <td>{{ $u->name }}</td>
                                             <td>{{ $u->email }}</td>
                                             <td>{{ $u->password }}</td>
                                             <td>{{ $u->role }}</td>
 
                                             <td>
-                                                <a href="{{ route('users.show', $u->id) }}">Show</a>
-                                                <a href="{{ route('users.edit', $u->id) }}">Edit</a>
+                                                <a href="{{ route('users.show', $u->id) }}" class="btn btn-sm btn-outline-info">Show</a>
+                                                <a href="{{ route('users.edit', $u->id) }}" class="btn btn-sm btn-warning">Edit</a>
                                                 <form action="{{ route('users.destroy', $u->id) }}" method="POST"
                                                     style="display:inline-block;">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit">Delete</button>
+                                                    <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

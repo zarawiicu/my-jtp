@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
+use Illuminate\Support\Facades\Validator;
+
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index():View
     {
         $users = UserModel::all();
         return view('admin.user.index', compact('users'));
@@ -21,7 +25,7 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create():View
     {
         return view('admin.user.create');
     }
@@ -29,31 +33,32 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request):RedirectResponse
 {
-    $validatedData = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|string|email|max:255|unique:users',
-        'password' => 'required|string|min:8|confirmed',
-        'role' => 'required|in:admin,user', // Validasi untuk role
+    $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'lowercase', 'email', 'max:255'],
+        'password' => ['required'],
+        'is_admin' => ['required', 'boolean']
     ]);
 
-    UserModel::create([
-        'name' => $validatedData['name'],
-        'email' => $validatedData['email'],
-        'password' => Hash::make($validatedData['password']),
-        'role' => $validatedData['role'], // Simpan role yang dipilih
+    $user = UserModel::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
     ]);
 
-    return redirect()->route('admin.user.index')->with('success', 'User created successfully.');
+    $user->save();
+    return redirect()->route('users.index')->with('success', 'User created successfully.');
 }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id):View
     {
-        return view('admin.user.show');
+        $users = UserModel::find($id);
+        return view('admin.user.show', compact('users'));
     }
 
     /**
@@ -61,32 +66,41 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.user.edit');
+        $users = UserModel::findOrFail($id);
+        return view('admin.user.edit', compact('users'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id):RedirectResponse
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users,email,' . $id,
-            'password' => 'nullable|string|min:8|confirmed',
-            'role' => 'required|in:admin,user', // Validasi untuk role
-        ]);
+        // Temukan user berdasarkan ID
+    $user = UserModel::findOrFail($id);
 
-        UserModel::find($id)->update($request->all());
+    // Update data user
+    $user->name = $request->name;
+    $user->email = $request->email;
 
-        return redirect()->route('admin.users.index')->with('success', 'User updated successfully.');
+    // Hanya mengupdate password jika ada input baru
+    if ($request->filled('password')) {
+        $user->password = Hash::make($request->password);
+    }
+
+    // Update is_admin
+    $user->is_admin = $request->is_admin;
+
+    // Simpan perubahan
+    $user->save();
+        return redirect()->route('users.index')->with('success', 'User updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id):RedirectResponse
     {
         UserModel::findOrFail($id)->delete();
-        return redirect()->route('user.index')->with('success', 'data Berhasil Dihapus');
+        return redirect()->back()->with('status','User Deleted');
     }
 }

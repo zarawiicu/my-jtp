@@ -17,17 +17,12 @@ class is_Admin
 
     {
 
-        if(auth()->user()->role == 'admin'){
+        if(auth()->user()->is_admin == 1){
 
             return $next($request);
 
         }
 
-
-
-        return response()->json(['You do not have permission to access for this page.']);
-
-        /* return response()->view('errors.check-permission'); */
-
+        return redirect(route('home'))->with('error', "Only admin can access!");
     }
 }

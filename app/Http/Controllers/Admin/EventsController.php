@@ -32,35 +32,31 @@ class EventsController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
-    $validatedData = $request->validate([
-        'judul' => 'required',
-        'deskripsi' => 'required',
-        'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-    ]);
-
-    $filename = NULL;
-    $path = NULL;
-
-        if($request->has('image')){
-
-            $file = $request->file('image');
-            $extension = $file->getClientOriginalExtension();
-
-            $filename = time().'.'.$extension;
-
-            $path = 'public/storage/event';
-            $file->move($path, $filename);
-        }
-
-        EventModel::create([
-            'judul' => $request->judul,
-            'deskripsi' => $request->deskripsi,
-            'gambar' => $path.$filename,
+    {
+        // Validasi input
+        $request->validate([
+            'judul' => 'required|string|max:255',
+            'deskripsi' => 'required|string',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // File harus berupa gambar
         ]);
 
-    return redirect()->route('events.index')->with('status', 'Event created successfully.');
-}
+        // Simpan data portofolio baru
+        $event = new EventModel();
+        $event->judul = $request->judul;
+        $event->deskripsi = $request->deskripsi;
+
+        // Upload gambar
+        if ($request->hasFile('gambar')) {
+            $file = $request->file('gambar');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('images'), $filename);
+            $event->gambar = $filename;
+        }
+
+        $event->save();
+
+        return redirect()->route('events.index')->with('success', 'Event berhasil ditambahkan.');
+    }
 
     /**
      * Display the specified resource.
@@ -68,7 +64,7 @@ class EventsController extends Controller
     public function show(string $id)
     {
         $events = EventModel::find($id);
-        return view('a.show', compact('events'));
+        return view('admin.event.show', compact('events'));
     }
 
     /**
@@ -85,38 +81,39 @@ class EventsController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
 {
-   
+
+    // Validasi input
     $request->validate([
-        'name' => 'required|max:255|string',
-        'description' => 'required|max:255|string',
-        'image' => 'nullable|mimes:png,jpg,jpeg,webp',
-        'is_active' => 'sometimes'
+        'judul' => 'required|string|max:255',
+        'deskripsi' => 'required|string',
+        'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // File harus berupa gambar
     ]);
 
-    $events = EventModel::findOrFail($id);
+    // Temukan data yang akan diupdate berdasarkan ID
+    $event = EventModel::findOrFail($id);
 
-    if($request->has('image')){
-
-        $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension();
-
-        $filename = time().'.'.$extension;
-
-        $path = 'public/storage/event';
-        $file->move($path, $filename);
-
-        if(Storage::exists($events->gambar)){
-            Storage::delete($events->gambar);
-        }
-    }
-
-    $events->update([
+    // Update data
+    $event->update([
         'judul' => $request->judul,
         'deskripsi' => $request->deskripsi,
-        'gambar' => $path.$filename,
     ]);
 
-    return redirect()->back()->with('status','Event Update');
+    // Upload gambar jika ada
+    if ($request->hasFile('gambar')) {
+        // Hapus gambar lama jika ada
+        if ($event->gambar) {
+            Storage::delete('public/images/' . $event->gambar);
+        }
+
+        // Upload gambar baru
+        $file = $request->file('gambar');
+        $filename = time() . '_' . $file->getClientOriginalName();
+        $file->move(public_path('images'), $filename);
+        $event->gambar = $filename;
+        $event->save();
+    }
+
+    return redirect()->route('events.index')->with('success', 'Event berhasil diubah!');
 }
 
 public function destroy($id)

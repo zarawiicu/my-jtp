@@ -65,10 +65,12 @@ return [
     */
 
     'providers' => [
-        'users' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\UserModel::class,
-        ],
+
+    'users' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\UserModel::class, // Pastikan menggunakan UserModel di sini
+],
+
         'admins' => [
             'driver' => 'eloquent',
             'model' => App\Models\AdminModel::class,

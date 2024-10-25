@@ -963,18 +963,27 @@
                             <ul class="sub-menu">
                                 <li><a href="{{ route('ticket')}}">Ticket</a></li>
                                 <li><a href="{{ route('snk') }}">Syarat Ketentuan</a></li>
-                                <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li>
-                                <li><a href="{{ route('login.index') }}">Login</a></li>
+                                {{-- <li><a href="{{ route('dashboard') }}">Dashboard Admin</a></li> --}}
                             </ul>
                         </li>
-                        <li>
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Join Us</a>
+                            <ul class="sub-menu">
+                                @if(Auth::check() && Auth::user()->is_admin == 0)
+                            <li><a href="{{ route('logout') }}" class="btn btn-dark">Logout</a></li>
+                            @endif
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
+                            
+                            </ul>
+                        </li>
+                        
+                        {{-- <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">
                             Logout
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
-                        </form>
-                    </li>
+                        </form> --}}
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

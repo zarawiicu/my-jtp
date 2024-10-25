@@ -122,48 +122,39 @@
                         <div class="col-lg-6">
                             <div class="meeting-item">
                                 <div class="thumb">
-                                    <div class="price">
-                                        <span>$22.00</span>
-                                    </div>
-                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/meeting-01.jpg') }}" alt="New Lecturer Meeting"></a>
+                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/news1.jpg') }}" alt="New Lecturer Meeting"></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="date">
                                         <h6>Nov <span>10</span></h6>
                                     </div>
                                     <a href="meeting-details.html">
-                                        <h4>New Lecturers Meeting</h4>
+                                        <h4>9 Experience Seru</h4>
                                     </a>
-                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                    <p>TP.ID - Setiap tahun, Jatim Park Group tidak pernah berhenti menghadirkan experience baru </p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="meeting-item">
                                 <div class="thumb">
-                                    <div class="price">
-                                        <span>$36.00</span>
-                                    </div>
-                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/meeting-02.jpg') }}" alt="Online Teaching"></a>
+                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/news2.png') }}" alt="Online Teaching"></a>
                                 </div>
                                 <div class="down-content">
                                     <div class="date">
                                         <h6>Nov <span>24</span></h6>
                                     </div>
                                     <a href="meeting-details.html">
-                                        <h4>Online Teaching Techniques</h4>
+                                        <h4>Penghargaan BETD</h4>
                                     </a>
-                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                    <p>Kota Batu Jawa Timur Park kembali menorehkan prestasi yang membanggakan</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="meeting-item">
                                 <div class="thumb">
-                                    <div class="price">
-                                        <span>$14.00</span>
-                                    </div>
-                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/meeting-03.jpg') }}"
+                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/news3.jpg') }}"
                                             alt="Higher Education"></a>
                                 </div>
                                 <div class="down-content">
@@ -171,19 +162,16 @@
                                         <h6>Nov <span>26</span></h6>
                                     </div>
                                     <a href="meeting-details.html">
-                                        <h4>Higher Education Conference</h4>
+                                        <h4>Drive-Thru Park</h4>
                                     </a>
-                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                    <p>konsep terobosan—”Drive Thru Park” pertama di dunia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="meeting-item">
                                 <div class="thumb">
-                                    <div class="price">
-                                        <span>$48.00</span>
-                                    </div>
-                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/meeting-04.jpg') }}"
+                                    <a href="meeting-details.html"><img src=" {{ asset('assets/images/news4.jpg') }}"
                                             alt="Student Training"></a>
                                 </div>
                                 <div class="down-content">
@@ -191,9 +179,9 @@
                                         <h6>Nov <span>30</span></h6>
                                     </div>
                                     <a href="meeting-details.html">
-                                        <h4>Student Training Meetup</h4>
+                                        <h4>Spesial Imlek</h4>
                                     </a>
-                                    <p>Morbi in libero blandit lectus<br>cursus ullamcorper.</p>
+                                    <p>MSemarak Tahun Baru Imlek 2024 – Jawa Timur Park Group</p>
                                 </div>
                             </div>
                         </div>
@@ -210,21 +198,19 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="item">
-                                <h3>APPLY FOR BACHELOR DEGREE</h3>
-                                <p>You are allowed to use this edu meeting CSS template for your school or university or
-                                    business. You can feel free to modify or edit this layout.</p>
+                                <h3>LODGING</h3>
+                                <p>many hotels, villas that can accompany your family vacation.</p>
                                 <div class="main-button-red">
-                                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                    <div class="scroll-to-section"><a href="#contact">Book Now!</a></div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
                             <div class="item">
-                                <h3>APPLY FOR BACHELOR DEGREE</h3>
-                                <p>You are not allowed to redistribute the template ZIP file on any other template
-                                    website. Please contact us for more information.</p>
+                                <h3>TOURISM</h3>
+                                <p>we offer a variety of tours, with local to international wisdom.</p>
                                 <div class="main-button-yellow">
-                                    <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+                                    <div class="scroll-to-section"><a href="#contact">Buy Ticket</a></div>
                                 </div>
                             </div>
                         </div>
@@ -234,54 +220,19 @@
                     <div class="accordions is-first-expanded">
                         <article class="accordion">
                             <div class="accordion-head">
-                                <span>About Edu Meeting HTML Template</span>
+                                <span>About JTP Group</span>
                                 <span class="icon">
                                     <i class="icon fa fa-chevron-right"></i>
                                 </span>
                             </div>
                             <div class="accordion-body">
                                 <div class="content">
-                                    <p>If you want to get the latest collection of HTML CSS templates for your websites,
-                                        you may visit <a rel="nofollow" href="https://www.toocss.com/"
-                                            target="_blank">Too CSS website</a>. If you need a working contact form
-                                        script, please visit <a href="https://templatemo.com/contact"
-                                            target="_parent">our contact page</a> for more info.</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="accordion">
-                            <div class="accordion-head">
-                                <span>HTML CSS Bootstrap Layout</span>
-                                <span class="icon">
-                                    <i class="icon fa fa-chevron-right"></i>
-                                </span>
-                            </div>
-                            <div class="accordion-body">
-                                <div class="content">
-                                    <p>Etiam posuere metus orci, vel consectetur elit imperdiet eu. Cras ipsum magna,
-                                        maximus at semper sit amet, eleifend eget neque. Nunc facilisis quam purus, sed
-                                        vulputate augue interdum vitae. Aliquam a elit massa.<br><br>
-                                        Nulla malesuada elit lacus, ac ultricies massa varius sed. Etiam eu metus eget
-                                        nibh consequat aliquet. Proin fringilla, quam at euismod porttitor, odio odio
-                                        tempus ligula, ut feugiat ex erat nec mauris. Donec viverra velit eget lectus
-                                        sollicitudin tincidunt.</p>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="accordion">
-                            <div class="accordion-head">
-                                <span>Please tell your friends</span>
-                                <span class="icon">
-                                    <i class="icon fa fa-chevron-right"></i>
-                                </span>
-                            </div>
-                            <div class="accordion-body">
-                                <div class="content">
-                                    <p>Ut vehicula mauris est, sed sodales justo rhoncus eu. Morbi porttitor quam velit,
-                                        at ullamcorper justo suscipit sit amet. Quisque at suscipit mi, non efficitur
-                                        velit.<br><br>
-                                        Cras et tortor semper, placerat eros sit amet, porta est. Mauris porttitor
-                                        sapien et quam volutpat luctus. Nullam sodales ipsum ac neque ultricies varius.
+                                    <p> Punakawan, kisah wayang asli Jawa, mewakili semangat <br>
+                                        Jawa Timur Park Group. Kerendahan hati, kecerdasan, dan tawa <br>
+                                        yang ditunjukkan oleh Semar, Gareng, Petruk, Bagong diwujudkan oleh Jawa Timur Park Group<br>
+                                         dengan menghadirkan beberapa taman rekreasi keluarga di tengah ramainya Kota Batu. <br>
+                                         Seperti keempat Punakawan, Jatim Park Group seolah ingin mengingatkan kita: <br>
+                                        jangan lupa tertawa menikmati hidup di tengah kesibukan!
                                     </p>
                                 </div>
                             </div>
@@ -592,20 +543,20 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h2>A Few Facts About Our University</h2>
+                            <h2>Some facts about our group</h2>
                         </div>
                         <div class="col-lg-6">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="count-area-content percentage">
                                         <div class="count-digit">94</div>
-                                        <div class="count-title">Succesed Students</div>
+                                        <div class="count-title">Solid</div>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="count-area-content">
                                         <div class="count-digit">126</div>
-                                        <div class="count-title">Current Teachers</div>
+                                        <div class="count-title">Aboard</div>
                                     </div>
                                 </div>
                             </div>
@@ -615,7 +566,7 @@
                                 <div class="col-12">
                                     <div class="count-area-content new-students">
                                         <div class="count-digit">2345</div>
-                                        <div class="count-title">New Students</div>
+                                        <div class="count-title">Local</div>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -630,8 +581,7 @@
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="video">
-                        <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank"><img
-                                src=" {{ asset('assets/images/play-icon.png') }}" alt=""></a>
+                        <a href="https://youtu.be/FuNJOCYCWLM?si=btWsZ4sVOZRDHFsF" target="_blank"><img src=" {{ asset('assets/images/play-icon.png') }}" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -647,7 +597,7 @@
                             <form id="contact" action="" method="post">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <h2>Let's get in touch</h2>
+                                        <h2>Criticism and Suggestions</h2>
                                     </div>
                                     <div class="col-lg-4">
                                         <fieldset>
@@ -708,5 +658,6 @@
                 </div>
             </div>
         </div>
+    {{-- </section> --}}
     @endsection
 
